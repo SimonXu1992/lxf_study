@@ -12,7 +12,7 @@ def to_timestamp(dt_str, tz_str):
     # 获取用户输入的时间
     dt = datetime.strptime(dt_str, "%Y-%m-%d %H:%M:%S")
 
-    #设置用户输入对应时区
+    # 设置用户输入对应时区
     time_zone_num = re.match(r'UTC([+|-][\d]{1,2}):00', tz_str).group(1)
     time_zone = timezone(timedelta(hours=int(time_zone_num)))
 
